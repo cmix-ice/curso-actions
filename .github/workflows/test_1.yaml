@@ -12,7 +12,8 @@ jobs:         # ← JOBS (qué tareas hacer)
         run: echo "Hola Mundo"
         
   Test:       # ← Otro job
+    needs: Hola
+    runs-on: ubuntu-latest    # Runner
     steps:
       - name: Hola Mundo (Step Name)
         run: echo "Hola Mundo 2"
-    runs-on: ubuntu-latest    # Runner
