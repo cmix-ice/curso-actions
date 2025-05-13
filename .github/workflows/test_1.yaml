@@ -9,4 +9,4 @@ jobs:         # ← JOBS (qué tareas hacer)
 
     steps:
       - name: Hola Mundo
-        run: "Hola Mundo"
+        run: echo "Hola Mundo"
