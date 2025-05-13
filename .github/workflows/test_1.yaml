@@ -1,12 +1,19 @@
-name: Hola Mundo Workflow
+name: Hola Mundo
 
 # Forma compacta de definir que el workflow se ejecutará cuando ocurra un push a cualquier rama.
 on: [push]    
 
 jobs:         # ← JOBS (qué tareas hacer)
-  jobHola:       # ← Un job
+  Hola:       # ← Un job
     runs-on: ubuntu-latest    # Runner
 
     steps:
-      - name: Hola Mundo
+      - name: Hola Mundo (Step Name)
         run: echo "Hola Mundo"
+        
+  Hola2:       # ← Otro job
+    runs-on: ubuntu-latest    # Runner
+
+    steps:
+      - name: Hola Mundo (Step Name)
+        run: echo "Hola Mundo 2"
