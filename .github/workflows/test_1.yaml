@@ -3,6 +3,7 @@ name: Hola Mundo
 on:
   push:
     branches:
+      - master
       - main
   pull_request:
     branches:
