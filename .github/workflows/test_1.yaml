@@ -61,4 +61,6 @@ jobs:         # ← JOBS (qué tareas hacer)
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '9'
-      - run: dotnet --version
+
+      - name: 👀 dotnet version
+        run: dotnet --version
