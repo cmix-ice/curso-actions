@@ -57,3 +57,8 @@ jobs:         # ← JOBS (qué tareas hacer)
       - name: 👀 Node version
         run: node --version
 
+      - name: 📦 Install dotnet and 👀 View installed version
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9'
+      - run: dotnet --version
