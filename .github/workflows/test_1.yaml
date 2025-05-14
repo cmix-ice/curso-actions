@@ -13,7 +13,8 @@ on:
     
 
 jobs:         # ← JOBS (qué tareas hacer)
-  Hola:       # ← Un job
+  hola:       # ← Un job
+    name: Holis
     runs-on: ubuntu-latest    # Runner
 
     steps:
@@ -34,15 +35,23 @@ jobs:         # ← JOBS (qué tareas hacer)
           echo "Este es otro texto que va para el archivo" >> hola.txt
           cat hola.txt
         
-  Other:       # ← Otro job
-    needs: [Hola]
+  other:       # ← Otro job
+    # needs: [hola]
     runs-on: ubuntu-latest    # Runner
 
     steps:
-      - name: 🚚 Checkout
+      - name: 🚚 Checkout repository
         uses: actions/checkout@v4.2.2   # Clona el repositorio actual en el entorno del runner.
+
       - name: 📁 LS
         run: ls -al
-      - name: 📄 Muestra README.md
-        run: cat README.md
+
+      # - name: 📄 Muestra README.md
+      #   run: cat README.md
+
+      - name: 📦 Setup Node.js environment  # Instala node en el runner.
+        uses: actions/setup-node@v4.4.0
+
+      - name: 👀 Node version
+        run: node --version
 

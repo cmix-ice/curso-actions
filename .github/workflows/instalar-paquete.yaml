@@ -1,7 +1,7 @@
 name: Test - Instalar Paquete
 
 on:
-  push:
+  # push:
   workflow_dispatch:
 
 jobs:
