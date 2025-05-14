@@ -8,5 +8,5 @@ runs:
 
   steps:
     - name: 🗣️ Hola Mundo
-      # shell: bash
+      shell: bash
       run: echo "Hola Mundo"

@@ -8,3 +8,4 @@ runs:
   steps:
     - name: 📂 LS
       run: ls - al
+      shell: bash
