@@ -10,7 +10,8 @@ on:
       - main    
 
 jobs:         # ← JOBS (qué tareas hacer)
-  Hola:       # ← Un job
+  hola:       # ← Un job
+    name: Holis
     runs-on: ubuntu-latest    # Runner
 
     steps:
@@ -31,11 +32,11 @@ jobs:         # ← JOBS (qué tareas hacer)
           echo "Este es otro texto que va para el archivo" >> hola.txt
           cat hola.txt
         
-  Other:       # ← Otro job
+  other:       # ← Otro job
     runs-on: ubuntu-latest    # Runner
+    needs: hola
 
     steps:
       - name: LS
         run: ls -al
 
-    needs: Hola
