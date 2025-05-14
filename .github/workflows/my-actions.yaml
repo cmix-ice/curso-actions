@@ -5,10 +5,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  local-action:
+  local-actions:
     runs-on: ubuntu-latest
 
     steps:
+      - name: 🚚 Checkout repository    # Se hace checkout para que se copien al runnner.
+        uses: actions/checkout@v4
+
       - name: ➀ Mi Local Action
         uses: ./.github/actions/my-action   # Ruta donde se encuentra mi GH action.
 
