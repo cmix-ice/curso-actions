@@ -51,6 +51,8 @@ jobs:         # ← JOBS (qué tareas hacer)
 
       - name: 📦 Setup Node.js environment  # Instala node en el runner.
         uses: actions/setup-node@v4.4.0
+        with:
+          node-version: latest
 
       - name: 👀 Node version
         run: node --version
