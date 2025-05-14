@@ -1,7 +1,12 @@
 name: Hola Mundo
 
-# Forma compacta de definir que el workflow se ejecutará cuando ocurra un push a cualquier rama.
-on: [push]    
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main    
 
 jobs:         # ← JOBS (qué tareas hacer)
   Hola:       # ← Un job
