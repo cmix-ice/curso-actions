@@ -1,0 +1,21 @@
+name: Test - Instalar Paquete
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Instalar Paquete
+        run: |
+          # Dar permisos de ejecución al script
+          chmod +x install-package.sh
+
+          # Ejecutar el script para instalar el paquete
+          ./install-package.sh
