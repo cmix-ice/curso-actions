@@ -1,0 +1,10 @@
+name: 'Segundo action'
+description: 'Segundo action a ejecutar.'
+author: 'Ice'
+
+runs:
+  using: composite
+
+  steps:
+    - name: 📂 LS
+      run: ls - al

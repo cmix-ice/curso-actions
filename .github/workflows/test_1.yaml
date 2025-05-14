@@ -3,9 +3,9 @@ name: Hola Mundo
 
 # Forma compacta de definir que el workflow se ejecutará cuando ocurra un push a cualquier rama.
 on:
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
   # pull_request:
   #   branches:
   #     - master
@@ -60,9 +60,7 @@ jobs:         # ← JOBS (qué tareas hacer)
       - name: 📦 Install dotnet
         uses: actions/setup-dotnet@v4
         with:                               # with para establecer parámetros
-          dotnet-version: |
-            6
-            9
+          dotnet-version: 9
 
       - name: 👀 dotnet version
         run: dotnet --version

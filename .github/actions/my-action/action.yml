@@ -1,0 +1,12 @@
+# Por convención deben llamarse action.yml o action.yaml
+
+name: Hola Mundo
+description: Esta es mi primer action.
+
+runs:
+  using: composite
+
+  steps:
+    - name: 🗣️ Hola Mundo
+      # shell: bash
+      run: echo "Hola Mundo"

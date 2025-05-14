@@ -1,0 +1,16 @@
+name: Mis Actions
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  local-action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ➀ Mi Local Action
+        uses: ./.github/actions/my-action   # Ruta donde se encuentra mi GH action.
+
+      - name: ➁ Mi Segundo Action
+        uses: ./.github/actions/otro-action
