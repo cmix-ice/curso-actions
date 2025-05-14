@@ -15,5 +15,7 @@ jobs:         # ← JOBS (qué tareas hacer)
     runs-on: ubuntu-latest    # Runner
 
     steps:
+      - name: PWD
+        run: pwd
       - name: LS
         run: ls -la
