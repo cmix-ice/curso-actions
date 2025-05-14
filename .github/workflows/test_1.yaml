@@ -11,7 +11,7 @@ jobs:         # ← JOBS (qué tareas hacer)
       - name: Hola Mundo
         run: echo "Hola Mundo"
       
-      - name: touch file
+      - name: Touch file
         run: touch hola.txt
 
       - name: Set text in file
@@ -21,8 +21,9 @@ jobs:         # ← JOBS (qué tareas hacer)
         run: cat hola.txt
         
       - name: Set text & Read file
-        run: echo "Este es otro texto que va para el archivo" >> hola.txt \
-          && cat hola.txt
+        run: |
+          echo "Este es otro texto que va para el archivo" >> hola.txt
+          cat hola.txt
         
   Other:       # ← Otro job
     runs-on: ubuntu-latest    # Runner
