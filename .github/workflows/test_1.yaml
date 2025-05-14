@@ -3,9 +3,9 @@ name: Hola Mundo
 
 # Forma compacta de definir que el workflow se ejecutará cuando ocurra un push a cualquier rama.
 on:
-  # push:
-  #   branches:
-  #     - master
+  push:
+    branches:
+      - master
   # pull_request:
   #   branches:
   #     - master
