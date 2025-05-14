@@ -11,7 +11,7 @@ on:
 
 jobs:         # ← JOBS (qué tareas hacer)
   hola:       # ← Un job
-    name: Holis
+    name: Holis >P
     runs-on: ubuntu-latest    # Runner
 
     steps:
@@ -37,6 +37,7 @@ jobs:         # ← JOBS (qué tareas hacer)
     needs: hola
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
       - name: LS
         run: ls -al
-
