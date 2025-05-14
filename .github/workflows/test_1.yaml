@@ -34,12 +34,12 @@ jobs:         # ← JOBS (qué tareas hacer)
         
   other:       # ← Otro job
     runs-on: ubuntu-latest    # Runner
-    needs: hola
+    # needs: hola
 
     steps:
-      - name: Checkout
+      - name: 🚚 Checkout
         uses: actions/checkout@v4.2.2   # Clona el repositorio actual en el entorno del runner.
-      - name: LS
+      - name: 📁 LS
         run: ls -al
-      - name: Muestra README.md
+      - name: 📄 Muestra README.md
         run: cat README.md
