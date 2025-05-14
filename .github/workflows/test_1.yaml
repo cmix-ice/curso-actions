@@ -1,17 +1,19 @@
+
 name: Hola Mundo
 
+# Forma compacta de definir que el workflow se ejecutará cuando ocurra un push a cualquier rama.
 on:
   push:
     branches:
       - master
-      - main
   pull_request:
     branches:
-      - main    
+      - master
+  workflow_dispatch:
+    
 
 jobs:         # ← JOBS (qué tareas hacer)
-  hola:       # ← Un job
-    name: Holis >P
+  Hola:       # ← Un job
     runs-on: ubuntu-latest    # Runner
 
     steps:
@@ -26,15 +28,15 @@ jobs:         # ← JOBS (qué tareas hacer)
 
       - name: Read file
         run: cat hola.txt
-        
+
       - name: Set text & Read file
         run: |
           echo "Este es otro texto que va para el archivo" >> hola.txt
           cat hola.txt
         
-  other:       # ← Otro job
+  Other:       # ← Otro job
+    needs: [Hola]
     runs-on: ubuntu-latest    # Runner
-    # needs: hola
 
     steps:
       - name: 🚚 Checkout
@@ -43,3 +45,4 @@ jobs:         # ← JOBS (qué tareas hacer)
         run: ls -al
       - name: 📄 Muestra README.md
         run: cat README.md
+
