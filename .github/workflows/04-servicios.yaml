@@ -1,0 +1,28 @@
+# En este action podemos ver como usar contenedores de Docker con los actions.
+
+name: Servicios
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  mysql-service:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: example
+        ports:
+          - 3306:3306
+      
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
+
+    steps:
+      - name: Test
+        run: ls
