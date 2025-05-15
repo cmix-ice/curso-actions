@@ -1,4 +1,5 @@
 # En este action podemos ver como usar contenedores de Docker con los actions.
+# https://docs.github.com/es/actions/use-cases-and-examples/using-containerized-services/about-service-containers
 
 name: Servicios
 
@@ -7,10 +8,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  install-services:   # Nombre del job
+  # Nombre del job.
+  container-job:   
     runs-on: ubuntu-latest
 
+    # Contenedores de servicio.
     services:
+      # Etiqueta para el contenedor.
       hello-world:
         image: hello-world
 
