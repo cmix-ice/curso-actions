@@ -7,10 +7,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  mysql-service:
+  install-services:   # Nombre del job
     runs-on: ubuntu-latest
 
     services:
+      hello-world:
+        image: hello-world
+
       mysql:
         image: mysql:5.7
         env:
@@ -18,10 +21,10 @@ jobs:
         ports:
           - 3306:3306
       
-      redis:
-        image: redis
-        ports:
-          - 6379:6379
+      # redis:
+      #   image: redis
+      #   ports:
+      #     - 6379:6379
 
     steps:
       - name: Test
