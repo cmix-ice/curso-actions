@@ -14,6 +14,8 @@ jobs:
 
       - name: ➀ Mi Local Action
         uses: ./.github/actions/my-action   # Ruta donde se encuentra mi GH action.
+        with:
+          message: 'Ice'                    # Nombre de la variable en mi GH action.
 
       - name: ➁ Mi Segundo Action
         uses: ./.github/actions/otro-action
