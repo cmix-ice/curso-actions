@@ -2,6 +2,7 @@
 
 name: Hola Mundo
 description: Esta es mi primer action.
+author: 'Ice'
 
 # Esta directiva nos permite pasar parámetros como se hace con with:
 inputs:
