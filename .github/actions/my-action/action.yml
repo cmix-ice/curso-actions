@@ -3,10 +3,18 @@
 name: Hola Mundo
 description: Esta es mi primer action.
 
+# Esta directiva nos permite pasar parámetros como se hace con with:
+inputs:
+  message:
+    description: Mensaje a imprimir
+    required: true
+    default: "Hola"
+
 runs:
   using: composite
 
   steps:
-    - name: 🗣️ Hola Mundo
+    - name: Hola Mundo
       shell: bash
-      run: echo "Hola Mundo"
+      # run: echo "Hola Mundo"
+      run: echo "Hola ${{ inputs.message }}"
